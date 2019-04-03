@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-const Display = ({ count }) => {
+const Display = ({ count, upKeyDown, downKeyDown }) => {
+
+  const handleKeyEvent = (e) => {
+    e.keyCode === 38 && upKeyDown(count);
+    e.keyCode === 40 && downKeyDown(count)
+  }
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyEvent);
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyEvent);
+    }
+  })
+
   return (
     <div className='display'>
-      The count: {count}
+      The count:{ count }
     </div>
   )
 }
+
+/* Display.propTypes = {
+  count: PropTypes.number,
+  upKeyDown: PropTypes.func,
+  downKeyDown: propTypes.func
+} */
 
 export default Display;

@@ -1,14 +1,23 @@
 import { connect } from 'react-redux';
 import Display from '../components/Display';
+import { eatAction, buyAction } from '../actions/CounterAction';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = ({ acorn }) => {
   return {
-    count: state.count,
+    count: acorn.count,
   };
 };
 
-const BuyAcorn = connect(
+const mapDispatchToProps = (dispatch) => {
+  return {
+    upKeyDown: (count) => dispatch(buyAction(count)),
+    downKeyDown: (count) => dispatch(eatAction(count))
+  };
+};
+
+const DisplayAcorn = connect(
   mapStateToProps,
+  mapDispatchToProps
 )(Display);
 
-export default BuyAcorn;
+export default DisplayAcorn;

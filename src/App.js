@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BuyAcorn from './containers/BuyAcorn';
 import DisplayAcorn from './containers/DisplayAcorn';
-
+import EatAcorn from './containers/EatAcorn'
 
 /* import Display from './components/Display';
 import Button from './components/Button';
 import { connect } from 'react-redux';
 import { buyAction, eatAction } from './actions/CounterAction' */
 
-const App = () => {
-  <main>
+const App = () => (
+  <div>
     <BuyAcorn />
     <DisplayAcorn />
     <EatAcorn />
-  </main>
-}
+  </div>
+)
 
 export default App;
 
