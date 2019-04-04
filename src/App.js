@@ -9,9 +9,6 @@ import Button from './components/Button';
 import { connect } from 'react-redux';
 import { buyAction, eatAction } from './actions/CounterAction' */
 
-
-
-
 const App = () => (
   <div>
     <BuyAcorn />

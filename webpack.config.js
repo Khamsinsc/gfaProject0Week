@@ -1,7 +1,10 @@
+var path = require('path');
+
 module.exports = {
-  entry: './src/index.js',
+  /*   entry: './src/index.js', */
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    /*  path: path.resolve(__dirname, 'dist'),
+     filename: 'index_bundle.js', */
     publicPath: '/'
   },
   module: {
@@ -14,8 +17,7 @@ module.exports = {
     ],
   },
   devServer: {
-    hot: true,
-    contentBase: './dist',
+    contentBase: __dirname + '/dist',
     historyApiFallback: true,
   },
 };

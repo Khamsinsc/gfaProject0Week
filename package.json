@@ -4,7 +4,7 @@
   "description": "Repo for 0.th week of the project phase",
   "main": "index.js",
   "scripts": {
-    "start:dev": "webpack-dev-server --mode development",
+    "start:dev": "webpack-dev-server --mode development --hot --inline --history-api-fallback",
     "lint": "eslint ./src/"
   },
   "repository": {
