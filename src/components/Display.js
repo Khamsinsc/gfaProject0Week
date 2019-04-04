@@ -18,15 +18,15 @@ const Display = ({ count, upKeyDown, downKeyDown }) => {
 
   return (
     <div className='display'>
-      The count:{ count }
+      The count:{count}
     </div>
   )
 }
 
-/* Display.propTypes = {
+Display.propTypes = {
   count: PropTypes.number,
   upKeyDown: PropTypes.func,
-  downKeyDown: propTypes.func
-} */
+  downKeyDown: PropTypes.func
+}
 
 export default Display;

@@ -1,4 +1,9 @@
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
+  },
   module: {
     rules: [
       {
@@ -9,6 +14,8 @@ module.exports = {
     ],
   },
   devServer: {
+    hot: true,
     contentBase: './dist',
+    historyApiFallback: true,
   },
 };

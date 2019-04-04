@@ -3,10 +3,14 @@ import BuyAcorn from './containers/BuyAcorn';
 import DisplayAcorn from './containers/DisplayAcorn';
 import EatAcorn from './containers/EatAcorn'
 
+
 /* import Display from './components/Display';
 import Button from './components/Button';
 import { connect } from 'react-redux';
 import { buyAction, eatAction } from './actions/CounterAction' */
+
+
+
 
 const App = () => (
   <div>
