@@ -5,7 +5,7 @@ const buyAction = (count) => ({
 
 const eatAction = (count) => ({
   type: 'MOD_COUNT',
-  count: count - 1
+  count: Math.max(0, count - 1)
 });
 
 export {

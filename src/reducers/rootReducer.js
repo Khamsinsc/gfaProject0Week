@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { acorn } from './acorn';
+import acorn from './acorn';
 
 const rootReducer = combineReducers({
   acorn
